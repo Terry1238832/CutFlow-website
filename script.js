@@ -14,8 +14,8 @@
   let phase = 'selected';
   let pendingMove;
   const states = {
-    selected: ['下载', '已选中 3 个项目，试试剪切。', '已选择 3 个项目', '试试剪切', '⌘ X', '⌘'],
-    cut: ['下载', '已剪切 3 个项目，原文件暂留原处。', '3 个项目 · 等待移动', '粘贴到目标', '⌘ V', '✂'],
+    selected: ['下载', '已选中 3 个项目，体验剪切后淡化。', '已选择 3 个项目', '剪切并淡化', '⌘ X', '⌘'],
+    cut: ['下载', '3 个项目已淡化，原文件暂留原处。', '3 个项目 · 等待移动', '粘贴到目标', '⌘ V', '✂'],
     moved: ['设计项目', '移动完成，原位置不再保留这些文件。', '3 个项目 · 已移动', '再试一次', '↺', '✓']
   };
   function show(next) {
@@ -43,6 +43,13 @@
     } else if (phase === 'moved') show('selected');
   });
   reset.addEventListener('click', () => { window.clearTimeout(pendingMove); show('selected'); });
+  const dimPreview = document.querySelector('#dim-preview');
+  dimPreview.addEventListener('change', () => {
+    document.querySelector('.dimming-compare').dataset.dimmed = String(dimPreview.checked);
+    document.querySelector('#dim-preview-status').textContent = dimPreview.checked
+      ? '右侧图标已淡化，文件仍在原处。'
+      : '淡化预览已关闭，对比图标的原始外观。';
+  });
   document.querySelectorAll('a[href="#faq-dimming"]').forEach(link => link.addEventListener('click', () => {
     document.querySelector('#faq-dimming').open = true;
   }));
