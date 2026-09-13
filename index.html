@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d0c10">
+  <meta name="description" content="CutFlow，为 Mac 带来顺手的文件剪切。在 Finder 中用 Command-X 剪切、Command-V 移动。下载适用于 Apple Silicon 与 Intel 的 macOS 应用。">
+  <meta property="og:title" content="CutFlow · 文件剪切，本该如此顺手。">
+  <meta property="og:description" content="熟悉的 ⌘X，熟悉的 ⌘V。一个安静待在菜单栏的 Mac 文件剪切工具。">
+  <meta property="og:type" content="website">
+  <title>CutFlow — 文件剪切，本该如此顺手。</title>
+  <link rel="icon" type="image/png" href="app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7V5h7l2 3h9v12H3V7Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="m8.5 7.5 12 11M8.5 16.5l12-11M14 12l-2 2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-1-3 3-.4 6-1.5 6-6 0-1.3-.5-2.5-1.3-3.3.1-.8.1-2-.3-3.2 0 0-1.2-.4-3.8 1.3a13 13 0 0 0-7.2 0C4.8 2.1 3.6 2.5 3.6 2.5c-.4 1.2-.4 2.4-.3 3.2A4.9 4.9 0 0 0 2 9c0 4.5 3 5.6 6 6-1 .8-1 2-1 3v4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M5.1 7a8 8 0 0 1 13.2-1L20 9M4 15l1.7 3A8 8 0 0 0 19 17"/></symbol>
+  </defs></svg>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="#" aria-label="CutFlow 首页"><img src="app-icon.png" alt="" width="34" height="34"><span>CutFlow</span></a>
+      <div class="nav-links"><a href="#features">功能</a><a href="#install">安装指南</a><a href="#faq">常见问题</a></div>
+      <a class="nav-download" href="#download">下载 CutFlow <svg class="icon"><use href="#i-download"/></svg></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <a href="#release-notes" class="release-pill"><span>NEW</span> CutFlow 1.1.3 已发布 <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <h1 id="hero-title">文件剪切，<br><span>本该如此顺手。</span></h1>
+      <p class="hero-description">熟悉的 <kbd>⌘X</kbd>，熟悉的 <kbd>⌘V</kbd>。<br class="mobile-break">让 Mac 的文件移动，跟上你的直觉。</p>
+      <div class="hero-actions"><a class="button button-primary" href="CutFlow-macOS.zip" download><svg class="icon"><use href="#i-download"/></svg>下载 Mac 版</a><a class="button button-secondary" href="#demo">看它如何工作 <span aria-hidden="true">↘</span></a></div>
+      <p class="compatibility">macOS 13+ <span>·</span> Apple Silicon & Intel <span>·</span> 1.4 MB</p>
+      <div class="demo-wrap" id="demo">
+        <div class="demo-heading"><span>少一个组合键。多一点顺手。</span><span class="demo-kind">交互演示</span></div>
+        <div class="finder" data-phase="selected">
+          <div class="finder-toolbar"><div class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></div><div class="toolbar-arrows" aria-hidden="true">‹ &nbsp; ›</div><span class="finder-title">下载</span><div class="toolbar-view" aria-hidden="true">⊞ &nbsp; ≡</div></div>
+          <div class="finder-content">
+            <aside class="finder-sidebar" aria-label="演示中的文件夹"><p>个人收藏</p><div class="sidebar-item" data-location="source"><svg class="icon"><use href="#i-download"/></svg>下载</div><div class="sidebar-item" data-location="destination"><svg class="icon"><use href="#i-folder"/></svg>设计项目</div><div class="sidebar-extra"><svg class="icon"><use href="#i-folder"/></svg>文稿</div><div class="sidebar-extra"><span aria-hidden="true">◷</span>最近使用</div><p class="sidebar-tag-title">标签</p><div class="sidebar-extra"><span class="tag-dot"></span>工作</div></aside>
+            <div class="finder-workspace">
+              <div class="folder-breadcrumb"><span>Mac</span><span>/</span><span class="breadcrumb-current">下载</span></div>
+              <div class="demo-files">
+                <div class="demo-file"><div class="file-icon file-design"><span class="file-letter">Aa</span><small>DESIGN</small></div><span class="file-name">品牌设计.fig</span></div>
+                <div class="demo-file"><div class="file-icon file-pdf"><span class="file-letter">↗</span><small>PDF</small></div><span class="file-name">项目方案.pdf</span></div>
+                <div class="demo-file"><div class="file-icon file-text"><span class="text-lines" aria-hidden="true"></span><small>TXT</small></div><span class="file-name">灵感笔记.txt</span></div>
+              </div>
+              <div class="demo-status"><span class="status-symbol" aria-hidden="true">⌘</span><span id="demo-status-text" role="status" aria-live="polite">已选中 3 个项目，试试剪切。</span></div>
+              <div class="finder-bottom"><span id="finder-count">已选择 3 个项目</span><span>图标视图</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-controls"><div class="demo-steps" aria-label="演示进度"><span data-step="selected" class="active">01 选择</span><i></i><span data-step="cut">02 剪切</span><i></i><span data-step="moved">03 移动</span></div><div class="demo-buttons"><button class="demo-reset" type="button" aria-label="重置演示" title="重置演示"><svg class="icon"><use href="#i-refresh"/></svg></button><button id="demo-action" type="button"><span class="action-label">试试剪切</span><kbd class="action-key">⌘ X</kbd></button></div></div>
+        <p class="demo-disclaimer">网页示意，不操作你的文件。剪切后文件留在原处，粘贴时才移动。</p>
+      </div>
+      <div class="trust-line"><span><svg class="icon"><use href="#i-check"/></svg>原生 macOS 应用</span><span><svg class="icon"><use href="#i-check"/></svg>不上传文件</span><span><svg class="icon"><use href="#i-check"/></svg>无需注册</span></div>
+    </section>
+    <section class="features shell section" id="features" aria-labelledby="features-title">
+      <div class="section-heading"><p class="eyebrow">SMALL APP. NATURAL FLOW.</p><h2 id="features-title">只多一步习惯。<br><span>少掉许多打断。</span></h2><p>安静待在菜单栏，需要时刚好在。</p></div>
+      <div class="feature-grid">
+        <article class="feature-card shortcut-card reveal"><div class="card-copy"><span class="card-index">01 / 顺手</span><h3>你的肌肉记忆，<br>现在 Mac 也懂。</h3><p>在 Finder 选中文件，⌘X 剪切，⌘V 移动。<br>不用再记一组额外的快捷键。</p></div><div class="key-scene" aria-hidden="true"><div class="keycap command-key">⌘<small>command</small></div><div class="keycap letter-key">X</div><svg class="key-arrow icon"><use href="#i-arrow"/></svg><div class="keycap letter-key purple-key">V</div></div></article>
+        <article class="feature-card native-card reveal"><div class="card-copy"><span class="card-index">02 / 原生</span><h3>熟悉的 Finder，<br>熟悉的处理方式。</h3><p>移动与同名冲突交给文件管理器。<br>CutFlow 专心做好快捷键这一件小事。</p></div><div class="native-flow" aria-hidden="true"><div class="flow-app"><img src="app-icon.png" alt="" width="62" height="62"><span>CutFlow</span></div><span class="flow-line"></span><div class="flow-end"><svg class="icon"><use href="#i-folder"/></svg><span>Finder</span></div></div></article>
+        <article class="feature-card privacy-card reveal"><div class="privacy-icon"><svg class="icon"><use href="#i-shield"/></svg></div><div class="card-copy"><span class="card-index">03 / 克制</span><h3>文件留在你的 Mac。</h3><p>不记录输入内容，不上传文件。剪切标记只暂存在内存中；按 Esc、重新复制或退出，就会清除。</p></div><div class="local-label"><span aria-hidden="true">⌘</span><div>在本机完成<small>无需账号，也无需联网</small></div></div></article>
+      </div>
+      <aside class="experiment-note reveal"><div><span class="outline-badge">可选实验功能</span><h3>想要剪切后淡化？可以试试。</h3><p>在 Finder 图标视图中，用覆盖层模拟视觉淡化。新安装默认关闭，效果可能因窗口和视图而异。</p></div><a href="#faq-dimming">了解适用范围 <svg class="icon"><use href="#i-arrow"/></svg></a></aside>
+    </section>
+    <section class="install-section section" id="install" aria-labelledby="install-title"><div class="shell"><div class="section-heading"><p class="eyebrow">READY WHEN YOU ARE.</p><h2 id="install-title">设置一次，<span>从此顺手。</span></h2><p>三个步骤，让 CutFlow 准备就绪。</p></div><ol class="install-steps"><li class="reveal"><span class="step-number">01</span><h3>拖入应用程序</h3><p>下载并解压安装包，将 CutFlow.app 拖入 Mac 的“应用程序”文件夹。</p></li><li class="reveal"><span class="step-number">02</span><h3>批准首次打开</h3><p>当前版本未经 Apple 公证。若系统阻止打开，核对来源后，在“隐私与安全性”中点击“仍要打开”。</p></li><li class="reveal"><span class="step-number">03</span><h3>开启辅助功能</h3><p>在系统设置中授予 CutFlow 辅助功能权限。回到应用点击“重新检测”，然后用测试文件试试 ⌘X 与 ⌘V。</p></li></ol><div class="permission-note"><svg class="icon"><use href="#i-shield"/></svg><p>辅助功能权限用于识别并转换快捷键。授权由你在 macOS 系统设置中完成。</p></div></div></section>
+    <section class="faq-section shell section" id="faq" aria-labelledby="faq-title"><div class="faq-intro"><p class="eyebrow">GOOD TO KNOW.</p><h2 id="faq-title">下载之前，<br><span>你可能想知道。</span></h2><p>把能力与边界，都说清楚。</p></div><div class="faq-list"><details><summary>支持哪些 Mac？<span aria-hidden="true">+</span></summary><p>提供 Apple Silicon 与 Intel 通用安装包，编译目标为 macOS 13 或更新版本。Intel 真机、旧版 macOS 及跨磁盘场景尚未完成全面实测。建议先用临时文件确认你的使用环境。</p></details><details><summary>剪切后，文件会立刻消失吗？<span aria-hidden="true">+</span></summary><p>不会。⌘X 会复制文件信息并记录待移动状态，原文件仍在原处；在同一文件管理器中按 ⌘V 后，才调用原生移动。按 Esc 可以取消剪切，剪贴板仍保留，可用于普通复制。</p></details><details><summary>已经授权，却还提示没有权限？<span aria-hidden="true">+</span></summary><p>旧签名或另一份同名应用可能导致授权不匹配。先核对 CutFlow 中显示的当前应用路径，退出旧版本，再在系统辅助功能列表中移除旧记录、添加正在使用的应用，最后重新检测。系统要求身份验证时，由你本人完成。</p></details><details id="faq-dimming"><summary>可以像 Windows 一样让图标变淡吗？<span aria-hidden="true">+</span></summary><p>提供可关闭的实验淡化功能，通过覆盖层模拟，并不修改 Finder 图标的真实透明度。当前仅针对 Finder 窗口的图标视图；列表、分栏、画廊、桌面及 ForkLift 不显示。完整视觉效果仍未完成验收，因此新安装默认关闭。</p></details><details><summary>普通复制、文字编辑还正常吗？<span aria-hidden="true">+</span></summary><p>没有有效剪切标记时，⌘V 保持普通粘贴。默认开启文字编辑保护，识别到搜索、重命名等输入控件时，保留原有快捷键。不要与 Command X 或同类快捷键工具同时启用。</p></details><details><summary>这个版本经过了哪些测试？<span aria-hidden="true">+</span></summary><p>Debug 与 Release 各通过 58 项自动化测试；Finder 原生多文件移动、普通撤销、冲突停止及“保留两者”经过文件哈希验证。1.1.3 真实键盘全局监听的完整回归、实验淡化视觉效果、ForkLift 和登录启动等仍待验证。“保留两者”后的撤销未确认通过。<a href="testing.html">查看完整测试报告 ↗</a></p></details></div></section>
+    <section class="download-section shell" id="download" aria-labelledby="download-title"><div class="download-glow" aria-hidden="true"></div><img class="download-icon" src="app-icon.png" alt="CutFlow 应用图标" width="80" height="80"><p class="eyebrow">LESS FRICTION. MORE FLOW.</p><h2 id="download-title">下一次移动文件，<br>试试更顺手的方式。</h2><a class="button button-primary" href="CutFlow-macOS.zip" download><svg class="icon"><use href="#i-download"/></svg>下载 CutFlow <span>1.1.3</span></a><p class="download-meta">macOS 13+ · Apple Silicon / Intel · 1.4 MB</p><p class="download-caveat">未经 Apple 公证，首次打开需手动批准。<a href="#install">查看安装指南</a></p><div class="release-links"><a href="#release-notes">版本更新</a><a href="SHA256SUMS.txt">SHA-256 校验值</a><a href="testing.html">测试报告</a></div></section>
+    <section class="release-section shell" id="release-notes"><div><span class="outline-badge">1.1.3 · BUILD 6</span><h3>让快捷键更可靠。</h3><p>修复提前粘贴时的按键重复触发、改写按键后的旧字符残留；新增 19 项键盘事件处理测试。实验淡化对新安装默认关闭。</p></div><time datetime="2026-09-13">2026.09.13</time></section>
+  </main>
+  <footer class="footer shell"><div><a class="brand" href="#"><img src="app-icon.png" alt="" width="28" height="28"><span>CutFlow</span></a><p>一个小工具，让文件移动顺手一点。</p></div><div class="footer-links"><a href="https://github.com/Terry1238832/CutFlow-website" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg>GitHub</a><a href="https://github.com/Terry1238832/CutFlow-website/issues" target="_blank" rel="noopener noreferrer">反馈问题 ↗</a></div><p class="footer-note">© 2026 CutFlow · 独立开发的 macOS 工具，与 Apple 或 Command X 无关联。</p></footer>
+</body>
+</html>
